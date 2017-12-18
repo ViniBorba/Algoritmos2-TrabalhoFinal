@@ -24,11 +24,16 @@ public class ProgramaC_Alunos {
 			e.printStackTrace();
 			System.exit(1);
 		}
+		
 		ListaEncadeada<Aluno> lista = ListaEncadeada.loadFromFile(arquivo);
+		
 		Aluno busca = new Aluno(name, email, idade, cidade);
+		System.out.println(arquivo);
+		/*
 		System.out.println(lista.search(busca, new SearchByName()));
 		System.out.println(lista.search(busca, new SearchByEmail()));
 		System.out.println(lista.search(busca, new SearchByAgeAndCity()));
+		*/
 	}
 
 }

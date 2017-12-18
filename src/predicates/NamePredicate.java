@@ -9,7 +9,7 @@ public class NamePredicate implements Predicado<Aluno> {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
+	//@Override
 	public boolean teste(Aluno objeto) {
 		// TODO Auto-generated method stub
 		return false;

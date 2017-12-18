@@ -5,9 +5,30 @@ import java.util.Comparator;
 
 public class ListaEncadeada<T> {
 	
+	//Criador de no
+	private static class ListNode<T> {
+		private T dado;
+		private ListNode<T> proximo;
+			public ListNode(T dado) {
+				this.dado = dado;
+				this.proximo = null;
+			}
+	}
+	
+	private ListNode<T> head; 
+	private ListNode<T> tail; 
+	
 	//acrescentar
 	public void append(T dado)
-	{}
+	{
+		ListNode<T> novo = new ListNode<>(dado);
+		if (tail != null) {
+			tail.proximo = novo;
+		} else {
+			head = novo;
+		}
+		tail = novo;
+	}
 	
 	//Adiciona antes
 	public void addFirst(T dado)
@@ -26,6 +47,7 @@ public class ListaEncadeada<T> {
 	//para ler arquivo eu acho
 	public static ListaEncadeada<model.Aluno> loadFromFile(FileReader arquivo)
 	{
+		
 		return null;
 	}
 }

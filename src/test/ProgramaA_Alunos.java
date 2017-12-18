@@ -9,6 +9,7 @@ import model.Aluno;
 public class ProgramaA_Alunos {
 
 	public static void main(String[] args) {
+
 		FileReader arquivo = null;
 		try {
 			arquivo = new FileReader("data/alunos.csv");
