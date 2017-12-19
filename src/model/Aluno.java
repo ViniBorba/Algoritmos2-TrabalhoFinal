@@ -9,18 +9,41 @@ import datastructures.ListaEncadeada;
 
 public class Aluno {
 	
+	String matricula;
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	String sexo;
+	String pais;
+	
 	private String nome;
 	String email;
-	int idade;
+	String idade;//tem que mudar para inteiro
 	String cidade;
 	
-	private static final String VIRGULA = ",";
+	
 	
 	public Aluno(){
 		
 	}
+	
+	public Aluno(String linhaDoArquivo ){
+		String[] separa = linhaDoArquivo.split(",");
+		this.matricula = separa[0];
+		this.nome = separa[1];
+		this.email = separa[2];
+		this.idade = separa[3];
+		this.sexo = separa[4];
+		this.pais = separa[5];
+		this.cidade = separa [6];
+	}
 
-	public Aluno(String name, String email, int idade, String cidade) {
+	public Aluno(String name, String email, String idade, String cidade) {
 		// TODO Auto-generated constructor stub
 		
 		//sc = nome.n
@@ -50,7 +73,8 @@ public class Aluno {
 		while(br.ready()){
 			//Scanner sc = null;
 			String linha = br.readLine();
-			Aluno quatro = new Aluno();
+			
+			Aluno quatro = new Aluno(linha);
 			
 			lista.append(quatro);   
 			 
@@ -76,7 +100,7 @@ public class Aluno {
 	
 	@Override
 	public String toString(){
-		return this.nome;
+		return this.nome +" "+ this.matricula;
 	}
 
 	public String getNome() {
