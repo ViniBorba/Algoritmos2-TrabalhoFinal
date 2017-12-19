@@ -9,19 +9,29 @@ import datastructures.ListaEncadeada;
 
 public class Aluno {
 	
-	String nome;
+	private String nome;
 	String email;
 	int idade;
 	String cidade;
 	
+	private static final String VIRGULA = ",";
 	
+	public Aluno(){
+		
+	}
 
-	//public Aluno(String name, String email, int idade, String cidade) {
+	public Aluno(String name, String email, int idade, String cidade) {
 		// TODO Auto-generated constructor stub
 		
+		//sc = nome.n
+				
 		
-		
-	//}
+		this.setNome(name);
+		this.email = email;
+		this.idade = idade;
+		this.cidade = cidade;
+			
+	}
 	
 	//Uma classe que 
 	
@@ -31,28 +41,50 @@ public class Aluno {
 		//tem que transformar uma linha desse arquivo em um Aluno e depois colocar esse aluno
 		//na lista
 		
+		//Criando o buffer para poder ler o arquivo
 		BufferedReader br = new BufferedReader(arquivo);
+		//Scanner sc = br;
+		//Criando a lista
+		ListaEncadeada<Aluno> lista = new ListaEncadeada<>();
 		
 		while(br.ready()){
-			   String linha = br.readLine();
-			   System.out.println(linha);
+			//Scanner sc = null;
+			String linha = br.readLine();
+			Aluno quatro = new Aluno();
+			
+			lista.append(quatro);   
+			 
+			   //System.out.println(linha);
 			}
 			br.close();
 		
 		
 			
-		Aluno dois = new Aluno();
-		Aluno tres = new Aluno();
+		//Aluno dois = new Aluno();
+		//Aluno tres = new Aluno();
 		
 			
-		ListaEncadeada<Aluno> lista = new ListaEncadeada<>();
+		
 		
 		//na lista tem que ser passado um Aluno
-		lista.append(dois);
-		lista.append(tres);
+		//lista.append(dois);
+		//lista.append(tres);
 		
 		//tem que retornar uma lista
 		return lista;
+	}
+	
+	@Override
+	public String toString(){
+		return this.nome;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	
 

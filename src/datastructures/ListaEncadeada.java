@@ -48,7 +48,7 @@ public class ListaEncadeada<T> {
 	{
 		ListNode<T> i = head;
 		while (i != null) {
-			System.out.println(i.dado);
+			System.out.println(i.dado.toString());
 			i = i.proximo;
 		}
 	}
