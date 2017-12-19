@@ -1,7 +1,10 @@
 package datastructures;
 
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Comparator;
+
+import model.Aluno;
 
 public class ListaEncadeada<T> {
 	
@@ -42,12 +45,19 @@ public class ListaEncadeada<T> {
 	
 	//mostra na tela
 	public void printObjects()
-	{}
+	{
+		ListNode<T> i = head;
+		while (i != null) {
+			System.out.println(i.dado);
+			i = i.proximo;
+		}
+	}
 	
 	//para ler arquivo eu acho
-	public static ListaEncadeada<model.Aluno> loadFromFile(FileReader arquivo)
+	public static ListaEncadeada<model.Aluno> loadFromFile(FileReader arquivo) throws IOException
 	{
-		
-		return null;
+		//tem que retornar uma LISTA
+		Aluno um = new Aluno();
+		return um.pegaArquivo(arquivo);
 	}
 }
