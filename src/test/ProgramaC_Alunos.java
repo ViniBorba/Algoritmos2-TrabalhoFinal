@@ -12,6 +12,7 @@ import model.Aluno;
 
 public class ProgramaC_Alunos {
 
+	//Nao entendi pq isso??
 	private static final String name = "";
 	private static final String email = "";
 	private static final int idade = 0;
@@ -26,16 +27,20 @@ public class ProgramaC_Alunos {
 			System.exit(1);
 		}
 		
+		//Criando uma lista de Aluno
 		ListaEncadeada<Aluno> lista = ListaEncadeada.loadFromFile(arquivo);
 		
 		//Aluno busca = new Aluno(name, email, idade, cidade);
-		//System.out.println(lista.printObjects());
+		//Criando um aluno para poder buscar um expecífico na lista
+		Aluno busca = new Aluno();
+		
 		lista.printObjects();
-		/*
+		
+						 //metodo da lista para fazer procura
 		System.out.println(lista.search(busca, new SearchByName()));
 		System.out.println(lista.search(busca, new SearchByEmail()));
 		System.out.println(lista.search(busca, new SearchByAgeAndCity()));
-		*/
+		
 	}
 
 }
