@@ -100,7 +100,7 @@ public class Aluno {
 	
 	@Override
 	public String toString(){
-		return this.nome +" "+ this.matricula;
+		return "NOME: "+ this.nome +" MATRICULA: "+ this.matricula +" EMAIL: "+this.email + " IDADE: " + this.idade + " SEXO: " + this.sexo + " PAIS: " + this.pais + " CIDADE: " + this.cidade;
 	}
 
 	public String getNome() {
