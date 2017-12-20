@@ -36,6 +36,12 @@ public class ProgramaC_Alunos {
 		
 		lista.printObjects();
 		
+		//return "NOME: "+" MATRICULA: "+" EMAIL: "+" IDADE: "+" SEXO: "+" PAIS: "+" CIDADE: "
+		//Aluno primeiroAluno = new Aluno("Vini","00AS1","vini@vini.com","27");
+		//lista.addFirst(primeiroAluno);
+		
+		//lista.printObjects();
+		
 						 //metodo da lista para fazer procura
 		System.out.println(lista.search(busca, new SearchByName()));
 		System.out.println(lista.search(busca, new SearchByEmail()));

@@ -30,12 +30,28 @@ public class ListaEncadeada<T> {
 		} else {
 			head = novo;
 		}
+		
 		tail = novo;
 	}
 	
 	//Adiciona antes
 	public void addFirst(T dado)
-	{}
+	{
+		//Vai ate o head e coloca na frente dele
+		//Preciso encontrar o head da lista
+		ListNode<T> first = new ListNode<>(dado);
+		first.proximo = head;
+		this.head = first;
+		
+		
+		/*
+		if (head != null){
+			head = first;
+		}
+		*/
+		//head.proximo = first;
+		
+	}
 	
 	//procura
 	public T search(T key, Comparator<T> cmp)
